@@ -24,7 +24,7 @@ pipeline {
         
         stage('Testing') {
             steps {
-               
+                bat "npm i"
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
@@ -39,7 +39,7 @@ pipeline {
     post {
         always {
             
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'reports/', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
         }
     }
 }
