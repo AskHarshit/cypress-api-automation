@@ -43,7 +43,7 @@ pipeline {
             publishHTML([allowMissing: false, 
             alwaysLinkToLastBuild: false, 
             keepAll: false, 
-            reportDir: 'report', 
+            reportDir: 'htmlreports', 
             reportFiles: 'index.html', 
             reportName: 'HTML Report', 
             reportTitles: '', 
