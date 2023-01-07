@@ -1,0 +1,29 @@
+{
+  "name": "cypress-testing-practice",
+  "version": "1.0.0",
+  "description": "practicing cypress",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "regression-allure": "cypress run --browser chrome --headless --spec cypress/e2e/webtests/**.cy.js --env allure=true",
+    "allure:clear": "if exist allure-results rmdir /q /s allure-results && if exist allure-report rmdir /q /s allure report && if exist cypress/screenshots rmdir /q /s cypress/screenshots && if exist cypress/videos rmdir /q /s cypress/videos",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "pretest": "npm run allure:clear",
+    "test": "npm run regression-allure",
+    "posttest": "npm run allure:report"
+  },
+  "author": "harshit",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "cy-verify-downloads": "^0.1.11",
+    "cypress": "^12.2.0",
+    "cypress-downloadfile": "^1.2.3",
+    "cypress-file-upload": "^5.0.8"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.20.1",
+    "mocha-allure-reporter": "^1.4.0",
+    "save-dev": "^0.0.1-security"
+  }
+}
