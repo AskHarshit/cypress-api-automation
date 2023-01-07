@@ -40,7 +40,14 @@ pipeline {
 
     post {
         always {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'C:\\Program Files\\Jenkins\\.jenkins\\jobs\\cypress demo pipeline\\htmlreports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            publishHTML([allowMissing: false, 
+            alwaysLinkToLastBuild: false, 
+            keepAll: false, 
+            reportDir: 'report', 
+            reportFiles: 'index.html', 
+            reportName: 'HTML Report', 
+            reportTitles: '', 
+            useWrapperFileDirectly: true])
         }
     }
 }
