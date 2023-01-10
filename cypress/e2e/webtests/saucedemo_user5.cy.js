@@ -51,4 +51,5 @@ describe ('social media links and dropdown validation', ()=>{
 
     })
 
-
+    // below is the css of prices from the cart page when all the products are into the same
+    // body > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1)

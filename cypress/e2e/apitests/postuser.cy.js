@@ -38,6 +38,7 @@ const dataJson = require('../../fixtures/createuser')
             }).then((resp)=>{
 
                 const userId = resp.body.id
+                
                     cy.log("user id is: " + userId)
 
                     cy.request({
